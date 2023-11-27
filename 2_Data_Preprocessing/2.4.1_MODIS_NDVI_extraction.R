@@ -15,12 +15,12 @@ library(ncdf4)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
-#Extraction of NDVI layer from HDF files and export to TIF format
-#This process does not work in Windows 11 due to GDAL compatibility. 
+#Extraction of NDVI layers from HDF files and export to TIF format
+#This process does not work on Windows 11 due to GDAL compatibility. 
 
 ##MOD13Q1##
 
