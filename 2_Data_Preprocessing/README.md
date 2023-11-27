@@ -14,3 +14,18 @@ e.g. ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100626000000-fv07.1.nc  ->  ESACCI-
 * Input projection = WGS84
 * Output projection = WGS84
 
+## 2.2 Terrain Parameters Calculation
+### 2.2.1 Assembly of Digital Elevation Model (DEM) for North America
+This part of the process imports the mean elevation layers from the GMTED2010 DEM tiles at 7.5 arc-second (WGS84), reprojects the tiles to Lambert Azimuthal Equal Area (LAEA) projection at 250 meters, and creates a mosaic cropped and masked to the North American region.
+#### 2.2.1.1 DEM Tiles reprojection
+Reprojection from WGS84 (geographic coordinates) to LAEA (metric coordinates).
+* This step is necessary to calculate terrain parameters in RSAGA.
+* The reference raster file in LAEA and 250 meters is the [Land Cover map of North America 2010](http://www.cec.org/north-american-environmental-atlas/land-cover-2010-modis-250m/), published by the Commission for Environmental Cooperation.
+#### 2.2.1.2	DEM Tiles Mosaic
+Mosaic of all reprojected tiles into a North American Mosaic.
+* All tiles are in Lambert Azimuthal Area projection and 250 meters cell size.
+#### 2.2.1.3	Masking to the region of interest
+Masking of North American DEM mosaic.
+* The output keeps data only within the North America boundary.
+
+
