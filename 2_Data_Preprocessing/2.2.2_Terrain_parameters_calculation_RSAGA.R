@@ -18,7 +18,7 @@ library(foreach)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -51,7 +51,7 @@ rsaga.geoprocessor("ta_compound", module = "Basic Terrain Analysis",
 ##########
 
 #Reprojection from LAEA CRS to WGS84 and transformation to TIF format. This process can be performed 
-#in parallel. This process works in R #but it was performed in ArcPro as it preservers better the 
+#in parallel. This process works in R, but it was performed in ArcPro as it preservers better the 
 #cell size when it goes from LAEA to WGS84.
 
 sdat_files <- list.files(path = "./1_Preprocessed_data/2_NA_GMTED2010_terrain_parameters/3_RSAGA_NorthAmerica_terrain_parameters/1_LAEA", 
