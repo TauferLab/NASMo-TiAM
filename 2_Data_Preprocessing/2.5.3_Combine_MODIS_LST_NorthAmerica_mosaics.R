@@ -15,7 +15,7 @@ library(raster)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -100,7 +100,7 @@ for (i in 1:length(years)) {
 ##########
 
 ##Masking of North America combined LST layers with North America Boundary.
-#*This process works in R but takes a long time, so I performed this in ArcPro.
+#*This process works in R but takes a long time, so it was performed in ArcPro.
 
 ##LAEA##
 
@@ -127,7 +127,7 @@ for (i in 1:length(lst_files)) {
 }
 
 ##Reprojection from LAEA to WGS84 and masking with the North American region boundary
-#*This process works in R but takes a long time and does not accurately preserves pixels shape, so I performed this in Arc Pro.
+#*This process works in R but takes a long time and does not accurately preserves pixels shape, so it was performed in ArcPro.
 
 ##WGS84##
 
