@@ -55,7 +55,7 @@ This section takes all 0-5cm depth Bulk Density global tiles available in the So
 * SoilGrids maps are delivered at a cell size of 250 meters.
 * Bulk density is expensed in cg/cm³.
 * Once the global mosaic is generated in Homolosine projection, it is cropped to the North America region, then reprojected and resampled using the WGS84 reference system and cell size of the preprocessed ESA-CCI biweekly means.
-## 2.4	NDVI Data Preparation (MOD13Q1 AND MYD13Q1)
+## 2.4	NDVI Data Preparation (MOD13Q1 and MYD13Q1)
 ### 2.4.1	Extraction of NDVI layers from MODIS HDF files and export to TIF format
 This section of the process reads the 16-days MOD13Q1 and MYD13Q1 composites in their native HDF format, extracts the layer with the NDVI information and exports it to TIF format.
 * MODIS tiles are in sinusoidal projection.
@@ -67,7 +67,7 @@ This section of the process takes the MOD13Q1 and MYD13Q1 NDVI tiles in TIF form
 This section merges the 8-days lagged MOD13Q1 and MYD13Q1 NDVI layers into combined biweekly NDVI means. The combined layers are thereafter masked to the North America region, reprojected, and resampled to WGS84, setting the same coordinate reference system and cell size as the ESA-CCI preprocessed biweekly means and the preprocessed terrain parameters.
 * The values in the output biweekly NDVI layers are transformed into meaningful NDVI value ranges (-1 to 1) using a scale factor of 0.0001 (as indicated in the MOD13Q1 and MYD13Q1 documentation).
 * The combined NDVI layers are named MCD13Q1.
-## 2.5	Land Surface Temperature Data Preparation (MOD11A2 AND MYD11A2)
+## 2.5	Land Surface Temperature Data Preparation (MOD11A2 and MYD11A2)
 ### 2.5.1	Extraction of LST layers from MODIS HDF files and export to TIF format
 This section of the process reads the 8-days MOD11A2 and MYD11A2 composites in their native HDF format, extracts the layer with the LST information and exports it to TIF format.
 * MODIS tiles are in sinusoidal projection.
