@@ -14,7 +14,7 @@ library(raster)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -115,7 +115,7 @@ for (i in 1:length(years)) {
         
 #Reprojection and resampling of North America NDVI mosaics from Sinusoidal 
 #projection to LAEA projection and 250 meters cell size  
-#*This process works in R but takes a long time, so I performed this in ArcPro.
+#*This process works in R but takes a long time, so it was performed in ArcPro.
 
 reference_raster <- raster("./0_Input_data/0_NorthAmerica_boundary_and_reference_raster/NA_LandCover_2010_V2_25haMMU.tif")
 
