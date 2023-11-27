@@ -15,12 +15,12 @@ library(ncdf4)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
 #Extraction of Snow Cover layer from HDF files and export to TIF format
-#This process does not work in Windows 11 due to GDAL compatibility. 
+#This process does not work on Windows 11 due to GDAL compatibility. 
 
 ##MOD10A2##
 
