@@ -44,7 +44,7 @@ foreach (i = 1:length(DEM_files)) %dopar% {
   plot(DEM_base)
   
   writeRaster(DEM_base, paste0("./1_Preprocessed_data/2_NA_GMTED2010_terrain_parameters/0_GMTED2010_reprojected_tiles/NorthAmerica_GMTED2010_", 
-                               DEM_name, "_LAEA_250m__.tif"), overwrite = TRUE)
+                               DEM_name, "_LAEA_250m.tif"), overwrite = TRUE)
   
   print(paste0(i, " out of ", length(DEM_files)))
   
