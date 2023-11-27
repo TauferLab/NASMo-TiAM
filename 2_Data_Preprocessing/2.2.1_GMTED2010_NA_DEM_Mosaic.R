@@ -37,7 +37,7 @@ foreach (i = 1:length(DEM_files)) %dopar% {
   
   library(raster)
   
-  DEM_name <- substr(DEM_files[i], 57,63)
+  DEM_name <- substr(DEM_files[i], 56,62)
   
   DEM_base <- raster(DEM_files[i])
   DEM_base <- projectRaster(DEM_base, reference_raster)
