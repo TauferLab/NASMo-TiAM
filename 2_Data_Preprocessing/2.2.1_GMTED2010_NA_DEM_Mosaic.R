@@ -16,7 +16,7 @@ library(foreach)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -89,7 +89,7 @@ removeTmpFiles(h=0.01)
 ##########
 
 #Masking of North American DEM mosaic. The output keeps data only within the North America boundary
-#*This process works in R but takes a long time, so I performed this in ArcPro.
+#*This process works in R but takes a long time, so it performed in ArcPro.
 
 reference_boundary <- shapefile("./0_Input_data/0_NorthAmerica_boundary_and_reference_raster/NA_LandCover_Boundary_2010_250m.shp")
 
