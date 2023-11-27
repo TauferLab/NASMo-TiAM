@@ -2,7 +2,7 @@
 
   #2. Data Preprocessing
 
-###2.3 Bulk Density data prepartion for North America
+###2.3 Bulk Density data preparation for North America
 
 #This section takes all 0-5cm depth Bulk Density global tiles available in the Soil Grids system, 
 #creates a global mosaic, crops the data to the North America region, runs a reprojection and resample 
@@ -15,7 +15,7 @@ library(raster)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -50,7 +50,7 @@ for (i in 2:length(BulkDensity_files)) {
 ##########
         
 #Global Bulk density reprojection, crop and mask to the North America region.
-#*This process works in R but takes a long time, so I performed this in ArcPro.
+#*This process works in R but takes a long time, so it was performed in ArcPro.
 
 NorthAmerica_boundary <- shapefile("./0_Input_data/0_NorthAmerica_boundary_and_reference_raster/00_northamerica_region_interest_wgs84.shp")
 
