@@ -79,5 +79,22 @@ This section of the process takes the MOD11A2 and MYD11A2 LST tiles in TIF forma
 ### 2.5.3	Calculation of LST Biweekly layers
 This section merges the 8-days MOD11A2 and MYD11A2 LST composites into combined biweekly LST means. The combined layers are thereafter masked to the North America region, reprojected, and resampled to WGS84, setting the same coordinate reference system and cell size as the ESA-CCI preprocessed biweekly means and the preprocessed terrain parameters.
 * The combined LST layers are named MCD11A2.
+## 2.6	Snow Cover Masks Preparation (MOD10A2 and MYD10A2)
+### 2.6.1	Extraction of Snow Cover layers from MODIS HDF files and export to TIF format
+This section of the process reads the 8-days MOD10A2 and MYD10A2 composites in their native HDF format, extracts the layer with the Snow Cover information and exports it to TIF format.
+* MODIS tiles are in sinusoidal projection.
+* MODIS LST native spatial resolution is ~500 meters.
+### 2.6.2	Snow Cover North America Mosaics
+This section of the process takes the MOD10A2 and MYD10A2 LST tiles in TIF format and assembles a mosaic for the North America region in the native Sinusoidal projection. Then reprojects and resamples the mosaics.
+* The values in the output biweekly Snow Cover layers describe different snow, ice, and water coverages.
+
+    0=missing data, 1=no decision, 11=night, 25=no snow, 37=lake, 39=ocean, 50=cloud, 100=lake ice, 200=snow, 254=detector saturated, 255=fill
+* Reprojection and resampling to transform the mosaics from Sinusoidal projection to LAEA projection with 250 meters cell size.
+### 2.6.3	Calculation of Snow Cover Biweekly layers
+This section merges the 8-days MOD10A2 and MYD10A2 Snow Cover composites into combined biweekly Snow Cover means. The values in the combined layers are reclassified to assign 0 to snow areas and 1 to the rest of the areas. The combined layers are thereafter masked to the North America region, reprojected, and resampled to WGS84, setting the same coordinate reference system and cell size as the ESA-CCI preprocessed biweekly means and the preprocessed terrain parameters.
+* Snow covered areas are classified as 0
+* All no snow-covered areas are classified as 1
+* The combined Snow Cover layers are named MCD10A2
+
 
 
