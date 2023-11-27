@@ -49,5 +49,11 @@ Terrain parameters calculated.
 -	The DEM must be in a projection based on metric units (e.g., LAEA).
 -	Once the parameters are calculated, each raster output must be reprojected to WGS84 to be comparable with the ESA-CCI biweekly means created in script 2.1
 -	This process takes about 4-5 days to finish in a computer with an Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz 3.79 GHz processor, 16 cores and 64 GB of Installed RAM.
+## 2.3	BULK DENSITY
+This section takes all 0-5cm depth Bulk Density global tiles available in the Soil Grids system, creates a global mosaic, crops the data to the North America region, runs a reprojection and resample the data to the same coordinate reference system and cell size as the ESA-CCI preprocessed biweekly means and the preprocessed terrain parameters.
+-	The global Bulk Density Mosaic is performed using the native SoilGrids Homolosine projection.
+-	SoilGrids maps are delivered at a cell size of 250 meters.
+-	Bulk density is expensed in cg/cm³.
+-	Once the global mosaic is generated in Homolosine projection, it is cropped to the North America region, then reprojected and resampled using the WGS84 reference system and cell size of the preprocessed ESA-CCI biweekly means.
 
 
