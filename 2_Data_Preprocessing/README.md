@@ -27,5 +27,27 @@ Mosaic of all reprojected tiles into a North American Mosaic.
 #### 2.2.1.3	Masking to the region of interest
 Masking of North American DEM mosaic.
 * The output keeps data only within the North America boundary.
+### 2.2.2	Calculation of Terrain Parameters
+This part of the process calculates 15 terrain parameters using the “Basic Terrain Analysis” tool in the “TA compound analysis” of RSAGA.
+
+Terrain parameters calculated.
+1.	Analytical Hillshading
+2.	Aspect
+3.	Channel Network Base Level
+4.	Vertical Distance to Channel Network
+5.	Flow Accumulation
+6.	Convergence Index
+7.	Elevation
+8.	Length-Slope Factor
+9.	Longitudinal Curvature
+10.	Cross Sectional Curvature
+11.	Relative Slope Position
+12.	Slope
+13.	Topographic Wetness Index
+14.	Catchment Area
+15.	Valley Depth
+-	The DEM must be in a projection based on metric units (e.g., LAEA).
+-	Once the parameters are calculated, each raster output must be reprojected to WGS84 to be comparable with the ESA-CCI biweekly means created in script 2.1
+-	This process takes about 4-5 days to finish in a computer with an Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz 3.79 GHz processor, 16 cores and 64 GB of Installed RAM.
 
 
