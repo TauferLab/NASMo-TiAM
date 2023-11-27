@@ -36,6 +36,7 @@
 * Spatial Resolution = 250 m
 * File Format = HDF (Hierarchical Data Format)
 * Projection = Sinusoidal
+
 [MYD13Q1 (Modis Aqua NDVI)](https://lpdaac.usgs.gov/products/myd13q1v006/)
 * Repository = NASA EARTH Data Search
 * Data available since mid-2002
@@ -59,6 +60,7 @@
 * Spatial Resolution = 1,000 m
 * File Format = HDF (Hierarchical Data Format)
 * Projection = Sinusoidal
+  
 [MYD11A2 (Modis Aqua LST)](https://lpdaac.usgs.gov/products/myd11a2v006/)
 * Repository = NASA EARTH Data Search
 * Data available since mid-2002
@@ -83,6 +85,7 @@
 * Spatial Resolution = 500 m
 * File Format = HDF (Hierarchical Data Format)
 * Projection = Sinusoidal
+  
 [MYD10A2 (Modis Aqua Snow Cover)](https://nsidc.org/data/myd10a2/versions/61)
 * Repository = NASA EARTH Data Search
 * Data available since mid-2002
