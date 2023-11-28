@@ -22,7 +22,7 @@
 library(dplyr)
 ##########
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -112,7 +112,7 @@ for (i in 2:length(folders)){
     name_station <- as.character(sm_station[1,1])
     
     write.csv(sm_station, file = paste0("./1_Preprocessed_data/7_NASMD_validation/2_nasmd_readings_2002_2020/",
-                                        name_station, '_nasmd_records_2002_2020_5cm_depth__.csv'), row.names = FALSE)
+                                        name_station, '_nasmd_records_2002_2020_5cm_depth.csv'), row.names = FALSE)
     
     print(i)
     
