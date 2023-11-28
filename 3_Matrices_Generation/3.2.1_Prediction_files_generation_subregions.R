@@ -20,7 +20,7 @@ library(raster)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -166,7 +166,7 @@ for (j in 1:length(regions_list)) {
       eval_file <- subset(eval_file, eval_file$ndvi != 0 & eval_file$lst != 0 & eval_file$elevation != 0 & eval_file$aspect != 0 & eval_file$slope != 0 & eval_file$twi != 0 & eval_file$bulk_density != 0)
       
       write.csv(eval_file, paste0("./4_Evaluation_data_csv/", year, "/", biweek, "/northamerica_eval_v71_250m_region_", 
-                                  regions_list[j], "_", year, "_", biweek, "__.csv"), row.names = FALSE)
+                                  regions_list[j], "_", year, "_", biweek, ".csv"), row.names = FALSE)
       
       gc() 
       
