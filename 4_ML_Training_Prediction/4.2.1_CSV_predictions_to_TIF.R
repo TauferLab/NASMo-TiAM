@@ -7,7 +7,7 @@
 #This code transforms the outputs of the Random Forest predictions from points to pixels in 
 #raster format. The code uses the preprocessed North America elevation raster file as reference 
 #and creates raster files in TIF format with the same coordinate reference system and pixel 
-#size as the reference. -	The outputs are up to 44 raster files per biweekly period, 
+#size as the reference. The outputs are up to 44 raster files per biweekly period, 
 #coinciding with the 44 predefined regions in the creation of the prediction matrices.
 
 ##Libraries
@@ -18,14 +18,14 @@ library(foreach)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("F:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
 predicted_files <- list.files("./5_NorthAmerica_prediction_outputs_250m_v71/2_RF/Prediction_outputs", 
                               pattern = ".csv", full.names = T, recursive = T)
 
-ref_250m <- raster("D:/3_North_America_SM_predictions/2_Covariates/1_static_covariates/NorthAmerica_wgs84_250m_elevation.tif")
+ref_250m <- raster("E:/3_North_America_SM_predictions/2_Covariates/1_static_covariates/NorthAmerica_wgs84_250m_elevation.tif")
 
 
 years <- c("2002","2003","2004","2005","2006","2007","2008","2009","2010",
