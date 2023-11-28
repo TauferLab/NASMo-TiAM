@@ -1,26 +1,46 @@
 *The section numbers in this document match the numbers of the codes they describe within the preprocessing stage of the NASMo-TiAM 250m workflow.*
 
-# 3 Generation of Biweekly Training and Prediction Matrices
-This section generates training matrices based on 14 predefined subregions of interest for North America.
-## 3.1 Training Matrices
-### 3.1.1 Training matrices by predefined subregions
-This code creates the training matrices for every biweekly period for 14 subregions of interest. The matrices depict the soil moisture values in the centroid coordinates of each coarse resolution ESA-CCI pixel, and the values of the 250 meters pixels spatially matching the same coordinates in the set of dynamic and static covariates.
-* The use of subregions eases the process due to the large number of 250 meters pixels in all the covariates layers across North America.
-* The code imports the ESA-CCI Soil Moisture reference data in coarse resolution (0.25 degrees), as well as the dynamic covariates (NDVI and LST), and the dynamic masks (Snow Cover) in fine resolution (250 meters) for ever biweekly period.
-* The static covariates (terrain parameters and bulk density) are also imported.
-* The set of imported layers are temporarily stored in a raster stack and then masked with the Snow Cover layer to remove snow and ice-covered areas from the output training matrices.
-* The output training matrices are CSV files.
-### 3.1.2	Union of subregions training matrices into North America matrices
-This code takes the csv training matrices of the 14 subregions per biweekly period and aggregates them into North American training matrices.
-### 3.1.3	North America biweekly training matrices split
-This code randomly splits North America training files in 70% and 30 % for training the models and for later test.
-## 3.2 Prediction Matrices
-### 3.2.1	Prediction matrices by predefined subregions
-This code creates the prediction matrices for every biweekly period for 44 subregions of interest. The matrices depict the values of the dynamic and static covariates for each biweekly period in the centroid coordinates of all 250 meters pixels within each subregion.
-* The use of subregions eases the process due to the large number of 250 meters pixels in all the covariates layers across North America. 
-* Different from the training matrices where the number of records was defined by the number of coarse resolution pixels (ESA-CCI data), prediction matrices hold all the points corresponding with the number of 250 pixels in each subregion, thus small subregions were defined for prediction matrices.
-* The code imports the dynamic covariates (NDVI and LST), and the dynamic masks (Snow Cover) in fine resolution (250 meters) for ever biweekly period.
-* The static covariates (terrain parameters and bulk density) are also imported.
-* The set of imported layers are temporarily stored in a raster stack and then masked with the Snow Cover layer to remove snow and ice-covered areas from the output prediction matrices.
-* The output prediction matrices are CSV files.
+# 4 Prediction of Soil Moisture Biweekly Layers for North America
+## 4.1 Models’ Generation and Soil Moisture Prediction
+In this stage of the workflow, we use a traditional machine learning workflow, such as, random forest to predict the soil moisture values. Random forest operates by constructing a multitude of decision trees at training time and provides a prediction by applying the model to a new data point at inference time.
+### 4.1.1 Random Forest Model Training
+This code creates the ensemble of decision trees based on the training matrices. This code uses scikit-learn, which is a free software machine learning library for Python.
 
+The inputs of this code are: 
+* The training matrices generated in 3.1 Training matrices. The code takes the path to CSV formatted matrices. We are working on a new version of the code that takes TIF formatted matrices. 
+* The maximum number of trees that are going to be considered for creating the model. 
+* The seed for reproducibility purposes of random processed in the code.
+* The path where the trained model is going to be stored. 
+
+The code reads one training matrix at the time and standardizes [(StandardScaler)](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html) it by removing the mean and scaling to unit variance. The standardization method is also referred to the z-score. 
+
+The code fits and transforms that training data and saves the scaler in pickle format (scaler.pkl) so it can be applied to the prediction matrices in the next stage. 
+
+The code defines a [RandomForestRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html), and using cross validation does a random parameter search [(RandomizedSearchCV)](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.RandomizedSearchCV.html). In this step, the code decides the optimal number of decision trees, depth of the decision trees, the number of leaves for each node, and other parameters based on the best accuracy on the training matrices. 
+
+The code saves the optimal parameters for the training data and model in a pickle format (model.pkl) so it can be applied for the predictions in the next stage. 
+
+The outputs of the code are:
+* The scaler for standardizing the data in the workflow scaler.pkl. 
+* The trained random forest model model.pkl. 
+
+### 4.1.2 Random Forest Soil Moisture Prediction
+This code does the inference of random forest trained model to the prediction matrices to get the soil moisture predictions at a higher resolution.
+
+The inputs of this code are:
+* The prediction matrices generated in 3.2 Prediction Matrices. The code takes the path to CSV formatted matrices. We are working on a new version of the code that takes TIF formatted matrices. 
+* The path to the scaler (scaler.pkl) so the prediction matrices are standardized with the same model as the training matrices.
+* The path to the trained random forest model (model.pkl) so it can be applied on the prediction matrices.
+
+The code reads the prediction matrices, loads the scaler.pkl and applies it to the matrices so they are standardized based on the training matrices.
+
+The code loads the trained random forest model (model.pkl) and does inference on each point in the prediction matrices resulting on a soil moisture prediction. 
+
+The output of this code is the predictions of soil moisture for the prediction matrices in CSV format.
+
+## 4.2 Assemble of North America Soil Moisture Predictions Mosaics
+### 4.2.1	Conversion of CSV predictions into raster files 
+This code transforms the outputs of the Random Forest predictions from points to pixels in raster format. The code uses the preprocessed North America elevation raster file as reference and creates raster files in TIF format with the same coordinate reference system and pixel size as the reference.
+* The outputs are up to 44 raster files per biweekly period, coinciding with the 44 predefined regions in the creation of the prediction matrices.
+### 4.2.2	Mosaic of predicted North America Soil Moisture raster files
+This section of the process takes all the raster files of the predicted soil moisture over the 44 subregions of interest and assembles a mosaic for North America.
