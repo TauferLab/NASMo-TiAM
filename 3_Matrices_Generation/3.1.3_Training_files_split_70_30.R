@@ -9,7 +9,7 @@
 
 ##########
 
-setwd("D:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
@@ -37,10 +37,10 @@ for (p in 1:length(training_files)) {
   test <- x[-train_ind, ]
   
   write.csv(train, paste0("./3_Training_and_Test_data_csv/2_northamerica_train_70pct/northamerica_train_v71_250m_70pct_",
-                          biweek_name, "__.csv"), row.names = FALSE)
+                          biweek_name, ".csv"), row.names = FALSE)
   
   write.csv(test, paste0("./3_Training_and_Test_data_csv/3_northamerica_test_30pct/northamerica_test_v71_250m_30pct_", 
-                         biweek_name, "__.csv"), row.names = FALSE)
+                         biweek_name, ".csv"), row.names = FALSE)
   
   print(paste0(p, "  ", biweek_name))
   
