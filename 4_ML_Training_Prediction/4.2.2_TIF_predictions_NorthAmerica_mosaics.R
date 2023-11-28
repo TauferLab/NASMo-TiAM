@@ -13,12 +13,12 @@ library(raster)
 
 rasterOptions(tmpdir = "E:/R_tempdirs/", progress = "text", timer = TRUE)
 
-setwd("F:/3_North_America_SM_predictions")
+setwd("E:/3_North_America_SM_predictions")
 
 ##########
 
 #Soil Moisture Mosaics
-#*This process works in R but takes a long time, so I performed this in Arc Pro.
+#*This process works in R but takes a long time, so it was performed in Arc Pro.
 
 years <- c("2002","2003","2004","2005","2006","2007","2008","2009","2010",
            "2011","2012","2013","2014","2015","2016","2017","2018","2019","2020")
@@ -55,4 +55,3 @@ for (i in 1:length(years)) {
       
     }
   }
-
