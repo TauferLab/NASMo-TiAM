@@ -17,26 +17,18 @@ List all the steps needed to install (compile) your project.
 List all the steps to run your project as well as the different arguments or options you have to execute it.
 
 ## Related Publications
-List the publications related to this project
+Llamas, R., P. Olaya, M. Taufer, and R. Vargas. 2024. North America Soil Moisture Dataset derived from Time-specific Adaptable Machine learning models (NASMo-TiAM 250m). In Preparation for Scientific Data, 2024.
 
-## Copyright and License (Optional but required to add LICENSE file)
-Add the license. In case this new repo belongs to another project, copy the used license of the other project. if not, you can use this as a template but discuss it with Dr T.
-```
-## Copyright and License
-
+## Copyright and License 
 Copyright (c) 2023, Global Computing Lab
 
-<NAME_OF_PROJECT> is distributed under terms of the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) with LLVM Exceptions.
+NASMo-TiAM is distributed under terms of the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) with LLVM Exceptions.
 See [LICENSE](https://github.com/TauferLab/GCLab_Code_Repo_Template/blob/main/LICENSE) for more details.
 
-```
-
 ## Acknowledgments
-Use the next template using the correct name of the project and the grant numbers:
-```
-<NAME_OF_PROJECT> is funded by the National Science Foundation (NSF) under grant numbers ### and ###. 
-Any opinions, findings, and conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
-```
+
+This study was funded by NASA’s Carbon Monitoring System program (grant 80NSSC21K0964) and the National Science Foundation's Office of Advanced Cyberinfrastructure (grants 2103845 and 2103836).
+Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
 
 ## Contact Info (optional)
 Add your and Dr. T's email
