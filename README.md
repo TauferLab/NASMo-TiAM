@@ -1,11 +1,20 @@
 # NASMo-TiAM: North America Soil Moisture Dataset Derived from Time-Specific Adaptable Machine Learning Models
 
-## Overview - About
+NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. This workflow is composed of five steps:
 
-Workflow for Generating North America Soil Moisture at 250m Dataset Derived from Time-specific Adaptable Machine Learning Models.
-NASMo-TiAM 250m workflow is based on standardized input data, where all the prediction covariates are preprocessed to allocate the same temporal and spatial characteristics.
-The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to
-December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
+(i) uses a combination of static and dynamic standardized input data, 
+(ii) preprocesses it to allocate the same temporal and spatial characteristics, 
+(iii) transforms it into an ML training and testing format, 
+(iv) trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction
+(v) validates the predictions with available high-resolution soil moisture data
+
+The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
+
+<p align="center">
+    <img src="imgs/NASMo_TiAM_250m_Fig1.jpg" width="800">
+    <br>
+    <em>Figure 1. Figure 1. Random Forest predictions of mean volumetric soil moisture values for North America derived from 426 biweekly periods from 2002 to 2020.</em>
+</p>
 
 ## Prerequisites and Dependencies
 To run this workflow, you must have [R>4.0](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html#installing-r) and [Python>3.8](https://www.python.org/downloads/). The R packages are listed in `install/R-dependencies.R` and for Python in `install/Python-dependencies.txt`.  
