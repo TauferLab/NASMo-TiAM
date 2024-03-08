@@ -2,13 +2,13 @@
 
 NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. It deploys ML-models to downscale coarse-resolution soil moisture estimates (0.25 deg) from the [European Space Agency Climate Change Initiative (ESA CCI)](https://climate.esa.int/en/projects/soil-moisture/data/) based on their correlation with a set of static (terrain parameters, bulk density) and dynamic covariates (Normalized Difference Vegetation Index, land surface temperature).
 
-This workflow is composed of five steps:
+This workflow is composed of five steps.
 
-(i) uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data, 
-(ii) preprocesses it to allocate the same temporal and spatial characteristics, 
-(iii) transforms it into an ML training and testing format, 
-(iv) trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction
-(v) validates the predictions with available high-resolution soil moisture data
+1. It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
+2. It preprocesses it to allocate the same temporal and spatial characteristics,
+3. It transforms it into an ML training and testing format,
+4. It trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction, and
+5. It validates the predictions with available high-resolution soil moisture data  
 
 The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
 
@@ -30,7 +30,7 @@ cd NASMo-TiAM/install
 ./install.sh
 ```
 
-If you already have R>4.0 and Python>3.8 installed on your local machine, you will only need to install the dependencies by running the next commands.
+If you already have R>4.0 and Python>3.8 installed on your local machine with a different operating system (Linux, Windows, or Mac), you will only need to install the dependencies by running the next commands.
 ```
 # Install R libraries
 sudo Rscript R-dependencies.R
