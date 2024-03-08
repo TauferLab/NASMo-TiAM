@@ -49,11 +49,11 @@ sudo python3 -m pip install -r Python-dependencies.txt
 ## How to Run
 This workflow includes five steps where you will need to access each of the steps to learn more about the execution. **You need to follow the order so all data dependencies are in place.**
 
-1. [Input Data:](1_Input_Data/)
-2. [Data Preprocessing:](2_Data_Preprocessing/) 
-3. [Matrices Generation:](3_Matrices_Generation/)
-4. [ML Training Prediction:](4_ML_Training_Prediction/)
-5. [ML Validation:](5_ML_Validation/)
+1. [Input Data](1_Input_Data/)
+2. [Data Preprocessing](2_Data_Preprocessing/) 
+3. [Matrices Generation](3_Matrices_Generation/)
+4. [ML Training Prediction](4_ML_Training_Prediction/)
+5. [ML Validation](5_ML_Validation/)
 
 ## Related Publications
 Llamas, R., P. Olaya, M. Taufer, and R. Vargas. 2024. North America Soil Moisture Dataset derived from Time-specific Adaptable Machine learning models (NASMo-TiAM 250m). In Preparation for Scientific Data, 2024.
