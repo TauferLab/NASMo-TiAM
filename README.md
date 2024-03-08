@@ -4,18 +4,20 @@ NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m
 
 This workflow is composed of five steps.
 
-1. It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
+1. [Input_Data: ](NASMo-TiAM/1_Input_Data/)It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
 2. It preprocesses it to allocate the same temporal and spatial characteristics,
 3. It transforms it into an ML training and testing format,
 4. It trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction, and
-5. It validates the predictions with available high-resolution soil moisture data  
+5. It validates the predictions with available high-resolution soil moisture data.
+
+Each step 
 
 The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
 
 <p align="center">
     <img src="imgs/NASMo_TiAM_250m_Fig1.jpg" width="600">
     <br>
-    <em>Figure 1. Figure 1. Random Forest predictions of mean volumetric soil moisture values for North America derived from 426 biweekly periods from 2002 to 2020.</em>
+    <em>Figure 1. Random Forest predictions of mean volumetric soil moisture values for North America derived from 426 biweekly periods from 2002 to 2020.</em>
 </p>
 
 ## Prerequisites and Dependencies
