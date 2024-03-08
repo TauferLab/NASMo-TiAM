@@ -20,6 +20,11 @@ The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moi
     <em>Figure 1. Random Forest predictions of mean volumetric soil moisture values for North America derived from 426 biweekly periods from 2002 to 2020.</em>
 </p>
 
+## Motivation
+Soil moisture plays a crucial role in the Earth's ecosystems and has substantial implications in different scientific fields such as hydrology (Jackson et al., 1996; Robinson et al., 2008), ecology, and climate science (Davidson et al., 1998; Falloon et al., 2011; Legates et al., 2010; Ward, 2008). A greater understanding of soil moisture processes and their spatial and temporal distribution can lead to improvements in different fields, such as agriculture (Engman, 1991; Hunt, 2015; Pablos et al., 2017), water resources management (Jacobs et al., 2003), natural disasters related to flooding (Tuttle et al., 2017), landslides (Crow, 2019), and drought events (Pablos et al., 2017). 
+
+This NASMo-TiAM 250 m dataset provides a fine spatial resolution soil moisture dataset across the North American region. Other continent-scale datasets have resolutions ranging from 0.25 degrees (O. and Orth, 2021) to 25 km (Skulovich and Gentine, 2023) and 1 km (Han et al., 2023). While the dataset from Vergopolan et al. (2021) has a 30-m resolution, its spatial coverage is limited to the conterminous United States.
+
 ## Prerequisites and Dependencies
 To run this workflow, you must have [R>4.0](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html#installing-r) and [Python>3.8](https://www.python.org/downloads/). The R packages are listed in `install/R-dependencies.R` and for Python in `install/Python-dependencies.txt`.  
 
