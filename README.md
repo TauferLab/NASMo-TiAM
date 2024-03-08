@@ -1,16 +1,16 @@
 # NASMo-TiAM: North America Soil Moisture Dataset Derived from Time-Specific Adaptable Machine Learning Models
 
-NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. It deploys ML-models to downscale coarse-resolution soil moisture estimates (0.25 deg) from the [European Space Agency Climate Change Initiative (ESA CCI)](https://climate.esa.int/en/projects/soil-moisture/data/) based on their correlation with a set of static (terrain parameters, bulk density) and dynamic covariates (Normalized Difference Vegetation Index, land surface temperature).
+NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. It deploys ML models to downscale coarse-resolution soil moisture estimates (0.25 deg) from the [European Space Agency Climate Change Initiative (ESA CCI)](https://climate.esa.int/en/projects/soil-moisture/data/) based on their correlation with a set of static (terrain parameters, bulk density) and dynamic covariates (Normalized Difference Vegetation Index, land surface temperature).
 
 This workflow is composed of five steps.
 
-1. [Input_Data: ](1_Input_Data/)It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
-2. It preprocesses it to allocate the same temporal and spatial characteristics,
-3. It transforms it into an ML training and testing format,
-4. It trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction, and
-5. It validates the predictions with available high-resolution soil moisture data.
+1. [Input Data:](1_Input_Data/) It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
+2. [Data Preprocessing:](2_Data_Preprocessing/) It preprocesses it to allocate the same temporal and spatial characteristics,
+3. [Matrices Generation:](3_Matrices_Generation/) It transforms it into an ML training and testing format,
+4. [ML Training Prediction:](4_ML_Training_Prediction/) It trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction, and
+5. [ML Validation:](5_ML_Validation/) It validates the predictions with available high-resolution soil moisture data.
 
-Each step 
+Each step has its directory with the data sources, scripts, and a README file describing in detail the execution steps.   
 
 The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
 
@@ -41,8 +41,14 @@ sudo Rscript R-dependencies.R
 sudo python3 -m pip install -r Python-dependencies.txt
 ```
 
-## Using - Running
-List all the steps to run your project as well as the different arguments or options you have to execute it.
+## How to Run
+This workflow includes five steps where you will need to access each of the steps to learn more about the execution. **You need to follow the order so all data dependencies are in place.**
+
+1. [Input Data:](1_Input_Data/)
+2. [Data Preprocessing:](2_Data_Preprocessing/) 
+3. [Matrices Generation:](3_Matrices_Generation/)
+4. [ML Training Prediction:](4_ML_Training_Prediction/)
+5. [ML Validation:](5_ML_Validation/)
 
 ## Related Publications
 Llamas, R., P. Olaya, M. Taufer, and R. Vargas. 2024. North America Soil Moisture Dataset derived from Time-specific Adaptable Machine learning models (NASMo-TiAM 250m). In Preparation for Scientific Data, 2024.
