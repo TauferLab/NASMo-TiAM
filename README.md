@@ -13,12 +13,19 @@ To run this workflow, you must have [R>4.0](https://cran.r-project.org/bin/linux
 ## Installation
 Currently, the installation is supported on Debian, and Debian-based Linux distributions. This script installs all the necessary packages (R>4, R libraries, pip, Python libraries) for your local computer.
 Requirement: Debian-based Linux distributions.
-
 ```
-git clone --recursive https://github.com/TauferLab/SOMOSPIE.git
-cd SOMOSPIE/install
+git clone --recursive https://github.com/TauferLab/NASMo-TiAM.git
+cd NASMo-TiAM/install
 ./install.sh
-source ~/.bashrc
+```
+
+If you already have R>4.0 and Python>3.8 installed on your local machine, you will only need to install the dependencies by running the next commands.
+```
+# Install R libraries
+sudo Rscript R-dependencies.R
+
+# Install Python libraries
+sudo python3 -m pip install -r Python-dependencies.txt
 ```
 
 ## Using - Running
