@@ -69,4 +69,4 @@ This study was funded by NASA’s Carbon Monitoring System program (grant 80NSSC
 Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
 
 ## Contact Information
-Please, contact the main developer directly Dr. Ricardo LLamas (rllamas@udel.edu), or the SOMOSPIE PIs, Dr. Michela Taufer (mtaufer@utk.edu) and Dr. Rodrigo Vargas (rvargas@udel.edu).
+Please, contact the main developer directly Dr. Ricardo Llamas (rllamas@udel.edu), or the SOMOSPIE PIs, Dr. Michela Taufer (mtaufer@utk.edu) and Dr. Rodrigo Vargas (rvargas@udel.edu).
