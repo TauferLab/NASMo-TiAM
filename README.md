@@ -1,8 +1,10 @@
 # NASMo-TiAM: North America Soil Moisture Dataset Derived from Time-Specific Adaptable Machine Learning Models
 
-NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. This workflow is composed of five steps:
+NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m resolution using time-specific adaptable Machine Learning (ML) models. It deploys ML-models to downscale coarse-resolution soil moisture estimates (0.25 deg) from the [European Space Agency Climate Change Initiative (ESA CCI)](https://climate.esa.int/en/projects/soil-moisture/data/) based on their correlation with a set of static (terrain parameters, bulk density) and dynamic covariates (Normalized Difference Vegetation Index, land surface temperature).
 
-(i) uses a combination of static and dynamic standardized input data, 
+This workflow is composed of five steps:
+
+(i) uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data, 
 (ii) preprocesses it to allocate the same temporal and spatial characteristics, 
 (iii) transforms it into an ML training and testing format, 
 (iv) trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction
