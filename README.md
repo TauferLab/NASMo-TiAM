@@ -4,7 +4,7 @@ NASMo-TiAM is a workflow for generating soil moisture for North America at 250 m
 
 This workflow is composed of five steps.
 
-1. [Input_Data: ](NASMo-TiAM/1_Input_Data/)It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
+1. [Input_Data: ](1_Input_Data/)It uses a combination of coarse-resolution soil moisture and static and dynamic standardized input data,
 2. It preprocesses it to allocate the same temporal and spatial characteristics,
 3. It transforms it into an ML training and testing format,
 4. It trains and tests a traditional ML model such as Random Forest to perform soil moisture prediction, and
