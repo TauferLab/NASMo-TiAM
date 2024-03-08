@@ -1,0 +1,17 @@
+install.packages("raster")
+install.packages("caret")
+install.packages("quantregForest")
+install.packages("rgdal")
+install.packages("rasterVis")
+install.packages("optigrab")
+install.packages("rgeos")
+install.packages("ncdf4")
+install.packages("dplyr")
+install.packages("RColorBrewer")
+install.packages("gdalUtils")
+install.packages("doParallel")
+install.packages("RSAGA")
+install.packages("foreach")
+install.packages("Metrics")
+
+
