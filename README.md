@@ -15,7 +15,7 @@ Each step has its directory with the data sources, scripts, and a README file de
 The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
 
 <p align="center">
-    <img src="imgs/NASMo_TiAM_250m_Fig2.jpg" width="600">
+    <img src="imgs/NASMo_TiAM_250m_Fig2.jpg" width="800">
     <br>
     <em>Figure 1. The NASMo-TiAM 250 m workflow involved standardizing input data to common spatial and temporal resolutions, integrating static and dynamic covariates, and training a Random Forest model to output fine scaled soil moisture across North America.</em>
 </p>
