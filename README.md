@@ -7,8 +7,8 @@ NASMo-TiAM 250m workflow is based on standardized input data, where all the pred
 The current version of NASMo-TiAM uses Random Forest to perform surface Soil Moisture (0-5cm depth) predictions at 250m of spatial resolution on 16-day periods from mid-2002 to
 December 2020 over North America. The generated data can be found in the [ORNL DAAC](https://daac.ornl.gov/CMS/guides/NASMo_TiAM_250m.html). 
 
-## Prerequisites - dependencies
-List all dependencies or software packages required to install or run your project fully
+## Prerequisites and Dependencies
+To run this workflow, you must have [R>4.0](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html#installing-r) and [Python>3.8](https://www.python.org/downloads/). The R packages are listed in `install/R-dependencies.R` and for Python in `install/Python-dependencies.txt`.  
 
 ## Installation
 List all the steps needed to install (compile) your project.
@@ -26,10 +26,8 @@ NASMo-TiAM is distributed under terms of the [Apache License, Version 2.0](http:
 See [LICENSE](https://github.com/TauferLab/GCLab_Code_Repo_Template/blob/main/LICENSE) for more details.
 
 ## Acknowledgments
-
 This study was funded by NASA’s Carbon Monitoring System program (grant 80NSSC21K0964) and the National Science Foundation's Office of Advanced Cyberinfrastructure (grants 2103845 and 2103836).
 Any opinions, findings, conclusions, or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation. 
 
-## Contact Info (optional)
-Add your and Dr. T's email
-
+## Contact Information
+Please, contact the main developer directly Dr. Ricardo LLamas (rllamas@udel.edu), or the SOMOSPIE PIs, Dr. Michela Taufer (mtaufer@utk.edu) and Dr. Rodrigo Vargas (rvargas@udel.edu).
