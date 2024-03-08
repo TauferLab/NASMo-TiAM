@@ -11,7 +11,15 @@ December 2020 over North America. The generated data can be found in the [ORNL D
 To run this workflow, you must have [R>4.0](https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html#installing-r) and [Python>3.8](https://www.python.org/downloads/). The R packages are listed in `install/R-dependencies.R` and for Python in `install/Python-dependencies.txt`.  
 
 ## Installation
-List all the steps needed to install (compile) your project.
+Currently, the installation is supported on Debian, and Debian-based Linux distributions. This script installs all the necessary packages (R>4, R libraries, pip, Python libraries) for your local computer.
+Requirement: Debian-based Linux distributions.
+
+```
+git clone --recursive https://github.com/TauferLab/SOMOSPIE.git
+cd SOMOSPIE/install
+./install.sh
+source ~/.bashrc
+```
 
 ## Using - Running
 List all the steps to run your project as well as the different arguments or options you have to execute it.
